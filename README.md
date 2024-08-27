@@ -14,6 +14,20 @@ dotnet new webapi --name workshop.wwwapi8
 dotnet add **/*.csproj
 ```
 
+**NOTE**  you will need to create an appsettings.json AND appsettings.Development.json file in the root of each project.  This is excluded in the gitignore file, so look in there at the last few lines and  you will see the relevant script to exclude.  That should prevent the files from uploading to github.  The contents of your settings files should be:
+```json
+{
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Warning"
+    }
+  },
+  "AllowedHosts": "*"
+}
+
+```
+
 ## workshop.wwwapi7
 
 Examine the WeatherForecastController class
